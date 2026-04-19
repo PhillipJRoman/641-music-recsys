@@ -3,13 +3,18 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "my-experiment"
-version = "2025.0"
-description = "Add your description here"
+name = "641-music-rec"
+version = "0.1.0"
+description = "Auditing collaborative filtering recommenders for bias propagation on Last.fm listening data, built with LensKit."
 readme = "README.md"
-requires-python = "==3.12.*"
+requires-python = "==3.12.5"
 dependencies = [
-  # put the project code's dependencies here
+  "lenskit ~=2026.1",
+  "pandas >=2",
+  "numpy >=2",
+  "matplotlib >=3.8",
+  "seaborn >=0.13",
+  "pyprojroot >=0.3",
 ]
 
 [dependency-groups]
@@ -30,12 +35,6 @@ dev = [
 
 [tool.uv]
 python-preference = "managed"
-
-# this index makes it easier to get usable PyTorch versions when we don't
-# care about supporting non-CUDA installations.
-[[tool.uv.index]]
-name = "lk-torch-cuda"
-url = "https://pypi.lenskit.org/torch/cu128"
 
 [tool.ruff]
 line-length = 100
