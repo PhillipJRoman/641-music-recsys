@@ -1,0 +1,75 @@
+# local configuration files
+.env
+.envrc
+*.local.toml
+
+# logging and outputs, profiles, etc.
+*.log
+*.out
+*.prof
+*.lprof
+perf.data*
+
+# common temp files
+*.wal
+*.wal-log
+*.tmp
+
+# python outputs and caches
+.ipynb_checkpoints/
+__marimo__/
+.pytest_cache/
+.ruff_cache/
+/.quarto/
+*.quarto_ipynb
+__pycache__/
+__pypackages__/
+cython_debug/
+.mypy_cache/
+.pyre/
+.pytype/
+.dmypy.json
+dmypy.json
+*.py[cod]
+*.so
+*.dll
+*.o
+*.obj
+*.a
+*.lib
+
+
+# software environments
+/.venv/
+/venv/
+/.pixi/
+/.tox/
+/.nox/
+node_modules/
+.eslintcache
+.cache/
+
+# build outputs and intermediates
+/build/
+/dist/
+/target/
+/_site/
+*.egg-info
+*.egg
+MANIFEST
+
+# test and coverage reports
+.coverage
+.coverage.*
+.cache
+coverage.xml
+.hypothesis/
+.pytest_cache/
+.nyc_output/
+
+# misc scratch files
+*.DS_Store
+.*.swp
+[Tt]humbs.db
+[Dd]esktop.ini
+*~

@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-experiment"
+version = "2025.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+  # put the project code's dependencies here
+]
+
+[dependency-groups]
+# development dependencies for working on the code, but are not needed to run it
+dev = [
+  # linting and formatting support
+  "pre-commit ~= 4.0",
+  "ruff >=0.8",
+  # ipython tools for interaction
+  "ipython >=8",
+  "jupyterlab >=3",
+  # tools for inspecting common data files
+  "parquet-tools >=0.2",
+  "visidata >=3",
+  # this is super useful for profiling code
+  "line_profiler ~=4.1; platform_machine != 'aarch64'",
+]
+
+[tool.uv]
+python-preference = "managed"
+
+# this index makes it easier to get usable PyTorch versions when we don't
+# care about supporting non-CUDA installations.
+[[tool.uv.index]]
+name = "lk-torch-cuda"
+url = "https://pypi.lenskit.org/torch/cu128"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = [".git", "__pycache__", "build", "dist", "*/tests/*", ".pixi/*"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+unfixable = ["F401"]
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["F403", "F405"]
+
+[tool.pyright]
+exclude = [".pixi/*", ".venv/*", "data/*"]
+typeCheckingMode = "basic"
+reportMissingImports = true
+reportMissingTypeStubs = false
