@@ -14,6 +14,7 @@ source = { editable = "." }
 dependencies = [
     { name = "dvc", extra = ["gs"] },
     { name = "dvc-gs" },
+    { name = "ipykernel" },
     { name = "lenskit" },
     { name = "matplotlib" },
     { name = "numpy" },
@@ -39,6 +40,7 @@ dev = [
 requires-dist = [
     { name = "dvc", extras = ["gs"], specifier = ">=3.67.1" },
     { name = "dvc-gs", specifier = ">=3.0.2" },
+    { name = "ipykernel", specifier = ">=7.2.0" },
     { name = "lenskit", specifier = "~=2026.1" },
     { name = "matplotlib", specifier = ">=3.8" },
     { name = "numpy", specifier = ">=2" },
