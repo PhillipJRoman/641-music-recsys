@@ -15,6 +15,8 @@ dependencies = [
   "matplotlib >=3.8",
   "seaborn >=0.13",
   "pyprojroot >=0.3",
+  "dvc[gs]>=3.67.1",
+  "dvc-gs>=3.0.2",
 ]
 
 [dependency-groups]
