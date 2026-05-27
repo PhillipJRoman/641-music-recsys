@@ -71,11 +71,12 @@ Data and intermediate artifacts are versioned with DVC.
 The project follows a script-per-stage architecture:
 
 1. Splitting, training, and batch inference run as standalone scripts, each producing artifacts saved to disk.
-2. Notebooks load the saved artifacts and produce analysis, metrics, and plots.
+2. Notebooks/Scripts load the saved artifacts and produce analysis, metrics, and plots.
 3. DVC tracks artifacts and enables both authors to share results without re-running expensive computations.
 
 ## Contact
 
+Ryan Quinlan - rwq23@drexel.edu
 Phillip Roman — pjr322@drexel.edu
 
 ## License
